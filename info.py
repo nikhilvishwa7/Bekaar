@@ -43,16 +43,16 @@ NO_RESULTS_MSG = bool(environ.get("NO_RESULTS_MSG", False))
 
 # MongoDB information
 DATABASE_URI = environ.get('DATABASE_URI', "")
-DATABASE_NAME = environ.get('DATABASE_NAME', "Rajappan")
+DATABASE_NAME = environ.get('DATABASE_NAME', "")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Others
-IS_VERIFY = bool(environ.get('IS_VERIFY', False))
-VERIFY2_URL = environ.get('VERIFY2_URL', "mdisklink.link")
-VERIFY2_API = environ.get('VERIFY2_API', "4fa150d44b4bf6579c24b33bbbb786dbfb4fc673")
+IS_VERIFY = bool(environ.get('IS_VERIFY', true))
+VERIFY2_URL = environ.get('VERIFY2_URL', "tinyfy.link")
+VERIFY2_API = environ.get('VERIFY2_API', "645f3cb39f7fd504c3de8e6adb71722fe5c3d8d0")
 SHORTLINK_URL = environ.get('SHORTLINK_URL', 'shorturllink.in')
 SHORTLINK_API = environ.get('SHORTLINK_API', '902284efd5e05828f51770d84f5ba26a6abf7751')
-IS_SHORTLINK = bool(environ.get('IS_SHORTLINK', True))
+IS_SHORTLINK = bool(environ.get('IS_SHORTLINK', False))
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '0').split()]
 MAX_B_TN = environ.get("MAX_B_TN", "5")
 MAX_BTN = is_enabled((environ.get('MAX_BTN', "True")), True)
